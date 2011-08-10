@@ -6,7 +6,11 @@
   "maintainers":  [ {
     "name":   "Zac Kleinpeter",
     "email":  "zac@kleinpeter.org"
-  }],
+  },{
+    "name":   "Lex Childs",
+    "email":  "lex.childs@praeses.com"
+  }
+  ],
   "bugs": {
     "mail": "zac@kleinpeter.com"
   },
