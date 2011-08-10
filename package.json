@@ -3,14 +3,19 @@
   "version":      "0.0.0",
   "description":  "School System",
   "keywords":     [ "school" ],
-  "maintainers":  [ {
-    "name":   "Zac Kleinpeter",
-    "email":  "zac@kleinpeter.org"
-  },{
-    "name":   "Lex Childs",
-    "email":  "lex.childs@praeses.com"
-  }
-  ],
+  "maintainers":  [
+  {
+    "name"  : "Zac Kleinpeter",
+    "email" : "zac@kleinpeter.org"
+  },
+  {
+    "name"  : "Lex Childs",
+    "email" : "lex.childs@praeses.com"
+  },
+  {
+    "name"  : "Micah Woods",
+    "email" : "micahwoods@gmail.com"
+  }],
   "bugs": {
     "mail": "zac@kleinpeter.com"
   },
