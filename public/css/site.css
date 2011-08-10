@@ -1,0 +1,23 @@
+html { background: rgb(73,155,234); background: -moz-linear-gradient(top, rgba(73,155,234,1) 0%, rgba(32,124,229,1) 100%); background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(73,155,234,1)), color-stop(100%,rgba(32,124,229,1))); background: -webkit-linear-gradient(top, rgba(73,155,234,1) 0%,rgba(32,124,229,1) 100%); background: -o-linear-gradient(top, rgba(73,155,234,1) 0%,rgba(32,124,229,1) 100%); background: -ms-linear-gradient(top, rgba(73,155,234,1) 0%,rgba(32,124,229,1) 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#499bea', endColorstr='#207ce5',GradientType=0 ); background: linear-gradient(top, rgba(73,155,234,1) 0%,rgba(32,124,229,1) 100%); } 
+
+body
+{background-color:white}
+
+.header
+{background-color:#999}
+
+body
+{min-height:900px}
+
+body
+{margin:3em}
+
+body
+{border:1px solid #777}
+
+body
+{position:static}
+
+.title
+{display:inline-block}
+
