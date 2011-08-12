@@ -1,60 +1,38 @@
-/* http://www.colorcombos.com/color-scheme-275.html
- * 2B3E42
- * 747E80
- * D5E1DD
- * F7F3E8
- * F2583E
- * 77BED2
- * */
+body
+{ width: 30em; }
 
-html 
-{background-image:url('../images/back.gif');}
+#supportingText
+{ width: 20em; }
+
+#linkList
+{ width: 9em; }
+
+#supportingText,
+#linkList
+{ display: inline-block; }
+
+#linkList
+{ vertical-align: top; }
+#linkList
+{ left: 20em; }
+
+#pageHeader
+{ border: 0.5em black dashed; }
 
 body
-{background-color:#F7F3E8}
+{ margin: auto; }
 
-.header
-{ background: #f2583e; background: -moz-linear-gradient(top, #f2583e 0%, #cc4935 100%); background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f2583e), color-stop(100%,#cc4935)); background: -webkit-linear-gradient(top, #f2583e 0%,#cc4935 100%); background: -o-linear-gradient(top, #f2583e 0%,#cc4935 100%); background: -ms-linear-gradient(top, #f2583e 0%,#cc4935 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2583e', endColorstr='#cc4935',GradientType=0 ); background: linear-gradient(top, #f2583e 0%,#cc4935 100%); } 
+#pageHeader
+{ margin: 2em 0; }
 
-.header2
-{background-image:url('../images/beval.gif')}
+#pageHeader #title
+{ text-align: right; }
 
-.header3
-{background-image:url('../images/schoolhouse.png')}
+h1, h2
+{ padding: 0.25em; }
 
-.header2
-{height:4px}
+h1
+{ font-size: 1.75em; }
 
-.header3
-{height:300px}
-
-.header3
-{width:233px}
-
-body
-{min-height:900px}
-
-body
-{margin:2em}
-
-body
-{border:1px solid #777}
-
-body
-{position:static}
-
-.header3
-{position:absolute}
-
-.header3
-{top:0,5em}
-
-.header
-{padding:1em}
-
-.title,
-.header3
-{display:inline-block}
-
-body 
-{ -webkit-box-shadow: 0px 0px 27px #2B3E42; -moz-box-shadow:    0px 0px 27px #2B3E42; box-shadow:         0px 0px 27px #2B3E42; } 
+h2
+{ font-size: 1.25em; }
