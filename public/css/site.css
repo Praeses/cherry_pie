@@ -16,6 +16,20 @@ body
 .header
 { background: #f2583e; background: -moz-linear-gradient(top, #f2583e 0%, #cc4935 100%); background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f2583e), color-stop(100%,#cc4935)); background: -webkit-linear-gradient(top, #f2583e 0%,#cc4935 100%); background: -o-linear-gradient(top, #f2583e 0%,#cc4935 100%); background: -ms-linear-gradient(top, #f2583e 0%,#cc4935 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2583e', endColorstr='#cc4935',GradientType=0 ); background: linear-gradient(top, #f2583e 0%,#cc4935 100%); } 
 
+.header2
+{background-image:url('../images/beval.gif')}
+
+.header3
+{background-image:url('../images/schoolhouse.png')}
+
+.header2
+{height:4px}
+
+.header3
+{height:300px}
+
+.header3
+{width:233px}
 
 body
 {min-height:900px}
@@ -29,10 +43,17 @@ body
 body
 {position:static}
 
+.header3
+{position:absolute}
+
+.header3
+{top:0,5em}
+
 .header
 {padding:1em}
 
-.title
+.title,
+.header3
 {display:inline-block}
 
 body 
