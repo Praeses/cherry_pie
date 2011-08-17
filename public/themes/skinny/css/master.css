@@ -1,9 +1,23 @@
+#supportingText
+{ background: black; }
+
+#div1
+{ background-image: url('/themes/skinny/images/bw_pie.png'); }
+
+#div1
+{ background-size: contain; }
+
+#div1
+{ background-repeat: no-repeat; }
+
 #pageHeader
 { border: 0.5em black dashed; }
 
-#supportingText,
 #linkList
 { display: inline-block; }
+
+#supportingText
+{ color: white; }
 
 h1
 { font-size: 1.75em; }
@@ -11,10 +25,23 @@ h1
 h2
 { font-size: 1.25em; }
 
-#linkList
-{ left: 20em; }
+#intro,
+#div1
+{ height: 10em; } 
 
-body
+#linkList,
+#div1
+{ left: 40em; }
+
+#intro,
+article
+{ left: 10em; }
+
+#supportingText
+{ left: 0; }
+
+#articles,
+#intro
 { margin: auto; }
 
 #pageHeader
@@ -23,16 +50,45 @@ body
 h1, h2
 { padding: 0.25em; }
 
+#supportingText
+{ padding: 2em 0; }
+
+#articles
+{ padding: 0 0 20em; }
+
+#supportingText,
+#linkList,
+#intro,
+#div1
+{ position:absolute; }
+
+article
+{ position:relative; }
+
 #pageHeader #title
 { text-align: right; }
 
 #linkList
+{ top: 15em; }
+
+#supportingText
+{ top: 10em; }
+
+#div1
+{ top: 5em; }
+
+#linkList
 { vertical-align: top; }
 
-body
+body,
+#intro
 { width: 30em; }
 
 #supportingText
+{ width: 100%; }
+
+article,
+#div1
 { width: 20em; }
 
 #linkList

@@ -6,23 +6,20 @@
   </head>
   <body>
 
-    <section id="container">
+    <header id="intro">
+      <hgroup id="pageHeader">
+        <h1 id="title">Title goes here</h1>
+        <h2 id="announcement">Announcement goes here</h2>
+      </hgroup>
+    </header>
 
-      <header id="intro">
-        <hgroup id="pageHeader">
-          <h1 id="title">Title goes here</h1>
-          <h2 id="announcement">Announcement goes here</h2>
-        </hgroup>
-        <section id="quickSummary">
-          
-        </section>
-      </header>
-
-      <section id="supportingText">
+    <div id="supportingText">
+      
+      <section id='articles'>
 
         <article>
           <time class='date'>6 min ago</time>
-          <section class='author'>Jimmy Smyth</section>
+          <div class='author'>Jimmy Smyth</div>
           Lorem ipsum  dolor sit amet,  consectetur adipiscing  elit. In mollis  lacus sit
           amet ipsum placerat tincidunt. Pellentesque habitant morbi tristique senectus et
           netus et malesuada fames ac turpis egesta
@@ -31,7 +28,17 @@
 
         <article>
           <time class='date'>yesterday</time>
-          <section class='author'>Jimmy Smyth</section>
+          <div class='author'>Jimmy Smyth</div>
+          Nulla interdum  diam a  est sagittis  ut eleifend urna  egestas. Fusce  sit amet
+          ligula purus, vel interdum dolor.  Aenean auctor, dolor eleifend mollis euismod,
+          ante  lectus faucibus  nunc, id  ornare erat  magna eget  lacus. Duis  ultricies
+          cursus pulvinar.  Mauris tinc      
+          <a href='#'>...read more</a>
+        </article>
+
+        <article>
+          <time class='date'>yesterday</time>
+          <div class='author'>Jimmy Smyth</div>
           Nulla interdum  diam a  est sagittis  ut eleifend urna  egestas. Fusce  sit amet
           ligula purus, vel interdum dolor.  Aenean auctor, dolor eleifend mollis euismod,
           ante  lectus faucibus  nunc, id  ornare erat  magna eget  lacus. Duis  ultricies
@@ -41,7 +48,10 @@
 
       </section>
 
-      <nav id="linkList">
+    </div>
+
+    <aside id="linkList">
+      <nav>
         <ul>
           <li><a href='#'>Lorem ipsum</a>    </li>
           <li><a href='#'>Nullam quis</a>    </li>
@@ -52,12 +62,18 @@
           <li><a href='#'>Morbi molestie</a> </li>
         </ul>
       </nav>
+    </aside>
 
-      <footer id="outro">
-        <section id="pagefooter"></section>
-      </footer>
+    <footer id="outro">
+      <section id="pagefooter"></section>
+    </footer>
 
-
-    </section>
+    <div id='#extra_divs'>
+      <div id='div1'></div>
+      <div id='div2'></div>
+      <div id='div3'></div>
+      <div id='div4'></div>
+      <div id='div5'></div>
+    </div>
   </body>
   <html>
