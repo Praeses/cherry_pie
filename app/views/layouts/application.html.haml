@@ -1,11 +1,20 @@
 !!!
 %html
   %head
-    %title=@current_site.display_name
+    %title=@current_site.name
     = stylesheet_link_tag    "application", :media => "all"
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
+    .head
+      - if user_signed_in?
+        .user
+          %span.display= current_user.display_name
+          = link_to 'Logout', destroy_user_session_path, :method => :delete, :class => 'logout'
+      - if admin_signed_in?
+        .user
+          %span.display= current_admin.email
+          = link_to 'Logout', destroy_admin_session_path, :method => :delete, :class => 'logout'
     %p.notice= notice
     %p.alert= alert
     = yield
