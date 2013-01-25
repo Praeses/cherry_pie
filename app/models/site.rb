@@ -7,6 +7,10 @@ class Site < ActiveRecord::Base
 
   after_create :setup_home_page
 
+  def display_name
+    name || url
+  end
+
   private
 
   def setup_home_page

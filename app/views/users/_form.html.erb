@@ -26,6 +26,12 @@
     <%= f.text_field :last_name %><br />
   </div>
 
+  <div class='field'>
+    <%= f.label :site, 'Site' %>:
+    <%= f.select(:site_id, options_for_select( Site.all.map{|s| [s.display_name, s.id]} )) %>
+    <br />
+  </div>
+
   <div class="actions">
     <%= f.submit "Save", :class => 'button' %>
     <%=link_to 'Back', users_path, :class => 'button' %>
