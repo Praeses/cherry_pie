@@ -12,5 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require handlebars.runtime
 //= require app
 //= require_tree .

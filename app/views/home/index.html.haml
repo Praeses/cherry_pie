@@ -1,7 +1,7 @@
 %section#container
   %header#intro
     %hgroup#pageHeader
-      %h1#title=@fields[:title]
+      %h1.read#title=@fields[:title]
       %h2#announcement=@fields[:announcement]
     %section#quickSummary
   %section#supportingText
@@ -54,4 +54,4 @@
   %span
 :javascript
   App.page_id = #{@page.id};
-  App.page_router = new App.Pages();
+  App.page_router = new App.Pages({el:$('body')});
