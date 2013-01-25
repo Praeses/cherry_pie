@@ -6,18 +6,22 @@ class App.Pages extends Spine.Controller
     super
 
   events:
-    'click .read': 'edit'
+    'click .show': 'edit'
     'blur .edit': 'read'
+    'keyup .edit': 'onType'
+
+  onType: (e) => @read(e) if e.keyCode == 13
 
   read: (e) =>
     name = $(e.target).attr('name')
     field =
       key: name
-      value: $(e.target).val()
+      value: $(e.target).val() || "(click to add text)"
     show_view = $(JST['templates/fields/show'](field))
-    $(e.target).replaceWith(show_view)
-    @model.fields[name] = field.value
-    @model.save()
+    try
+      $(e.target).replaceWith(show_view)
+      @model.fields[name] = $(e.target).val()
+      @model.save()
 
 
   edit: (e) =>
@@ -33,15 +37,15 @@ class App.Pages extends Spine.Controller
     name = elm.id
     field =
       key: name
-      value: $(elm).text()
+      value: $(elm).text() || "(click to add text)"
     show_view = $(JST['templates/fields/show'](field))
     $(elm).html(show_view)
 
 
   render: (p) =>
     @model = App.Page.first()
-    $("##{key}").addClass('editable') for key,value of @model.fields
-    @setup_read(elm) for elm in $('.editable')
+    $('.read').addClass('editable')
+    @setup_read(elm) for elm in $('.read')
     @
 
 
