@@ -1,4 +1,7 @@
 CherryPie::Application.routes.draw do
+  devise_for :users, :skip => :registrations
+  resources :users
+
   get "home/index"
 
   # The priority is based upon order of creation:
