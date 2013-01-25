@@ -7,6 +7,9 @@
     = csrf_meta_tags
   %body
     .head
+      - if !user_signed_in? and !admin_signed_in?
+        .user
+          = link_to 'Login', new_user_session_path
       - if user_signed_in?
         .user
           %span.display= current_user.display_name
