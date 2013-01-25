@@ -14,4 +14,16 @@ class ApplicationController < ActionController::Base
     Rails.application.config.action_mailer.default_url_options[:host] = request.host_with_port
   end
 
+  def authenticate_any!
+    if admin_signed_in?
+      true
+    else
+      authenticate_user!
+    end
+  end
+
+  def current_admin_or_user
+    current_admin || current_user
+  end
+
 end

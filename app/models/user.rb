@@ -19,4 +19,16 @@ class User < ActiveRecord::Base
     email
   end
 
+
+  scope(:for,
+     lambda do |x|
+       if x.respond_to? :site_id
+         where({:site_id => x.site_id})
+       else
+         where('1 = 1')
+       end
+     end
+  )
+
+
 end

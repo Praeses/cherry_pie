@@ -1,4 +1,6 @@
 CherryPie::Application.routes.draw do
+  devise_for :admins
+
   devise_for :users, :skip => :registrations
   resources :users
 

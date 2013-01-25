@@ -1,16 +1,13 @@
 !!!
 %html
   %head
-    %title svdp
+    %title=@current_site.display_name
     = stylesheet_link_tag    "application", :media => "all"
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
 
     .devise
-      %h1='Society of St. Vincent de Paul'
-      %br
-      %img.logo{:src => '/assets/logo.png'}
       %p.notice= notice
       %p.alert= alert
       = yield
