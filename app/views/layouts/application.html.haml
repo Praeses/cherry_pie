@@ -4,6 +4,8 @@
     %title=@current_site.name
     = stylesheet_link_tag    "application", :media => "all"
     = javascript_include_tag "application"
+    -#= current_theme_stylesheet_path("application")
+    = theme_stylesheet_link_tag "application"
     = csrf_meta_tags
   %body
     .head

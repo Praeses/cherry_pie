@@ -25,6 +25,7 @@ end
 gem 'jquery-rails'
 gem 'haml-rails'
 gem 'spine-rails'
+gem 'themes_for_rails'
 
 
 group :development do
