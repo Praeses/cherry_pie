@@ -10,9 +10,10 @@ class ApplicationController < ActionController::Base
 
   def setup_site
     @current_site = Site.find_or_create_by_url( request.host )
+    @current_site.theme ||= "apple"
     Rails.application.config.action_mailer.default_url_options ||= {}
     Rails.application.config.action_mailer.default_url_options[:host] = request.host_with_port
-    theme "apple"
+    theme @current_site.theme
   end
 
   def authenticate_any!
