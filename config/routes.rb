@@ -1,6 +1,8 @@
 CherryPie::Application.routes.draw do
 
 
+  themes_for_rails
+
   devise_for :admins
 
   devise_for :users, :skip => :registrations
