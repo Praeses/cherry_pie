@@ -13,6 +13,9 @@ class User < ActiveRecord::Base
   belongs_to :site
   validates_presence_of :site, :first_name, :last_name
 
+  has_many :pages, :class_name => 'Page', :foreign_key => 'owner_id'
+
+  before_create :add_empty_page
 
   def display_name
     return "#{first_name} #{last_name}" if first_name || last_name
@@ -34,5 +37,13 @@ class User < ActiveRecord::Base
      end
   )
 
+
+  private
+
+  def add_empty_page
+    page = Page.new
+    page.site_id = self.site_id
+    self.pages << page
+  end
 
 end

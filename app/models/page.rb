@@ -4,7 +4,6 @@ class Page < ActiveRecord::Base
   has_many :field_objs, :class_name => 'Field'
   attr_accessible :fields
 
-  before_create :asign_owner
 
   def fields
     Hash[*(field_objs.map{|f|[f.key.to_sym, f.value]}.flatten)]
@@ -22,10 +21,5 @@ class Page < ActiveRecord::Base
     value
   end
 
-  private
-
-  def asign_owner
-    self.owner = @current_user
-  end
 
 end

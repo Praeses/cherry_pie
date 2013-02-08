@@ -39,6 +39,7 @@ class PagesController < ApplicationController
 
   def update
     @page = Page.find(params[:id])
+    authorize! :update, @page
     respond_to do |format|
       if @page.update_attributes(params[:page])
         #@page.fields = params[:fields]

@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
 
   before_filter :authenticate_any!
+  load_and_authorize_resource
 
   # GET /users
   # GET /users.json
@@ -35,7 +36,8 @@ class UsersController < ApplicationController
 
     @user = User.new(params[:user])
     @user.password = (0...8).map{65.+(rand(25)).chr}.join #Random temp password
-
+    @user.admin = params[:user][:admin]
+    params[:user].delete :admin
     respond_to do |format|
       if @user.save
         @user.send_reset_password_instructions
@@ -52,6 +54,8 @@ class UsersController < ApplicationController
   # PUT /users/1.json
   def update
     @user = User.find(params[:id])
+    @user.admin = params[:user][:admin]
+    params[:user].delete :admin
     respond_to do |format|
       if @user.update_attributes(params[:user])
         format.html { redirect_to :users, :notice => 'User was successfully updated.' }

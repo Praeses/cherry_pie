@@ -12,10 +12,18 @@ a.password = 'asdf'
 a.save(:validate => false)
 
 u = User.new
-u.email = 'user@localhost.com'
+u.email = 'admin@localhost.com'
 u.password = 'asdf'
 u.first_name = 'Test'
 u.last_name = 'User'
 u.site_id = 1
+u.admin = true
 u.save(:validate => false)
 
+u = User.new
+u.email = 'user@localhost.com'
+u.password = 'asdf'
+u.first_name = 'Test'
+u.last_name = 'Admin'
+u.site_id = 1
+u.save(:validate => false)

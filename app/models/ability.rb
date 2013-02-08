@@ -5,12 +5,15 @@ class Ability
 
     return if user.nil?
 
+    #Praeses admin
     if user.class == Admin
       can :manage, :all
       return
     end
 
-    can [:edit, :destroy], Page do |page|
+    can :manage, User if user.admin?
+
+    can [:update, :destroy], Page do |page|
       user.admin? || page.owner == user
     end
 

@@ -25,7 +25,14 @@ class ApplicationController < ActionController::Base
   end
 
   def current_admin_or_user
-    current_admin || current_user
+    @current_admin_user = current_admin || current_user
+    @current_admin_user
   end
+
+
+  def current_ability
+    @current_ability ||= ::Ability.new(current_admin_or_user)
+  end
+
 
 end

@@ -52,7 +52,7 @@
   %span
 #extraDiv6
   %span
-- if current_user || current_admin
+- if can? :update, @page
   :javascript
     App.page_id = #{@page.id};
-    App.page_router = new App.Pages({el:$('body')});
+    App.page_controller = new App.Pages({el:$('body')});
