@@ -19,6 +19,10 @@ class User < ActiveRecord::Base
     email
   end
 
+  def admin?
+    self.admin
+  end
+
 
   scope(:for,
      lambda do |x|

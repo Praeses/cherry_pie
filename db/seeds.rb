@@ -7,7 +7,15 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 a = Admin.new
-a.email = 'lex.childs@praeses.com'
-a.password = 'letmein1234'
-a.save!
+a.email = 'admin@praeses.com'
+a.password = 'asdf'
+a.save(:validate => false)
+
+u = User.new
+u.email = 'user@localhost.com'
+u.password = 'asdf'
+u.first_name = 'Test'
+u.last_name = 'User'
+u.site_id = 1
+u.save(:validate => false)
 
