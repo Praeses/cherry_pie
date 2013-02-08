@@ -4,6 +4,7 @@
     %title=@current_site.display_name
     = stylesheet_link_tag    "application", :media => "all"
     = javascript_include_tag "application"
+    = theme_stylesheet_link_tag "application"
     = csrf_meta_tags
   %body
 
@@ -11,3 +12,6 @@
       %p.notice= notice
       %p.alert= alert
       = yield
+
+
+  = theme_javascript_include_tag "application"

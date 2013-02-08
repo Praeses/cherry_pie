@@ -7,6 +7,7 @@ gem 'rails', '3.2.11'
 
 gem 'sqlite3'
 gem 'devise'
+gem 'cancan'
 
 
 # Gems used only for assets and not required
@@ -27,6 +28,8 @@ gem 'haml-rails'
 gem 'spine-rails'
 gem 'themes_for_rails'
 
+
+gem 'pry-rails', :group => :development
 
 group :development do
   gem 'hpricot'

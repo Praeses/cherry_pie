@@ -5,7 +5,6 @@
     <th>Email</th>
     <th>First Name</th>
     <th>Last Name</th>
-    <th>Site</th>
     <th></th>
     <th></th>
   </tr>
@@ -15,7 +14,6 @@
     <td><%= user.email %></td>
     <td><%= user.first_name %></td>
     <td><%= user.last_name %></td>
-    <td><%= user.site.display_name %></td>
     <td><%= link_to 'Edit', edit_user_path(user) %></td>
     <td><%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
