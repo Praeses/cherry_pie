@@ -1,7 +1,10 @@
 class Page < ActiveRecord::Base
   belongs_to :site
+  belongs_to :owner, :class_name => 'User', :foreign_key => 'owner_id'
   has_many :field_objs, :class_name => 'Field'
   attr_accessible :fields
+
+  before_create :asign_owner
 
   def fields
     Hash[*(field_objs.map{|f|[f.key.to_sym, f.value]}.flatten)]
@@ -17,6 +20,12 @@ class Page < ActiveRecord::Base
     self.field_objs = fields
     Field.destroy_all({:page_id => nil})
     value
+  end
+
+  private
+
+  def asign_owner
+    self.owner = @current_user
   end
 
 end
