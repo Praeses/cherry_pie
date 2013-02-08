@@ -13,8 +13,12 @@ class Ability
 
     can :manage, User if user.admin?
 
+    can [:update], User do |usr|
+      user.id == usr.id
+    end
+
     can [:update, :destroy], Page do |page|
-      user.admin? || page.owner == user
+      user.admin? || (page.owner && page.owner.id == user.id)
     end
 
   end

@@ -1,17 +1,25 @@
 class UsersController < ApplicationController
 
-  before_filter :authenticate_any!
-  load_and_authorize_resource
+  before_filter :authenticate_any!, :except => [:index, :show]
+  load_and_authorize_resource :except => [:index, :show]
 
   # GET /users
   # GET /users.json
   def index
+    @page = @current_site.users_page
+    @fields = @page.fields
     @users = User.for(current_admin_or_user)
 
     respond_to do |format|
       format.html # index.html.erb
       format.json { render :json => @users }
     end
+  end
+
+  def show
+    @user = User.find_by_id(params[:id]) || User.find_by_full_name(params[:id].gsub(/_/, " ") )
+    @page = @user.pages.first
+    @fields = @page.fields
   end
 
   # GET /users/new

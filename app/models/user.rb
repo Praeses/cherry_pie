@@ -38,6 +38,24 @@ class User < ActiveRecord::Base
   )
 
 
+  def full_name
+    full = first_name + " " + last_name
+    write_attribute(:full_name, full)
+    full
+  end
+
+  def first_name= value
+    write_attribute(:first_name, value)
+    full_name
+    value
+  end
+
+  def last_name= value
+    write_attribute(:last_name, value)
+    full_name
+    value
+  end
+
   private
 
   def add_empty_page
