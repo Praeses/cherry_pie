@@ -17,7 +17,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find_by_id(params[:id]) || User.find_by_full_name(params[:id].gsub(/_/, " ") )
+    @user = User.find_by_id(params[:id]) || User.with_fullname(params[:id] ).first
     @page = @user.pages.first
     @fields = @page.fields
   end

@@ -13,7 +13,33 @@
       %section.read#article3=@fields[:article3]
   %nav#linkList
     %ul
-      %li
+      %li.read.link
+        %a{:href => "#{@fields[:link1_href]}",'data-name' => 'link1' }
+          =@fields[:link1]
+      %li.read.link
+        %a{:href => "#{@fields[:link2_href]}",'data-name' => 'link2' }
+          =@fields[:link2]
+      %li.read.link
+        %a{:href => "#{@fields[:link3_href]}",'data-name' => 'link3' }
+          =@fields[:link3]
+      %li.read.link
+        %a{:href => "#{@fields[:link4_href]}",'data-name' => 'link4' }
+          =@fields[:link4]
+      %li.read.link
+        %a{:href => "#{@fields[:link5_href]}",'data-name' => 'link5' }
+          =@fields[:link5]
+      %li.read.link
+        %a{:href => "#{@fields[:link6_href]}",'data-name' => 'link6' }
+          =@fields[:link6]
+      %li.read.link
+        %a{:href => "#{@fields[:link7_href]}",'data-name' => 'link7' }
+          =@fields[:link7]
+      %li.read.link
+        %a{:href => "#{@fields[:link8_href]}",'data-name' => 'link8' }
+          =@fields[:link8]
+      %li.read.link
+        %a{:href => "#{@fields[:link9_href]}",'data-name' => 'link9' }
+          =@fields[:link9]
   %footer#outro
     %section#pagefooter
 

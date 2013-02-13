@@ -1,7 +1,13 @@
-.editable .show
+.editable .show,
+.editable .showlink,
 { cursor:pointer }
 
-.editable .show:hover
+.editable .show:hover,
+.editable .showlink:hover
 { background-color:rgba(0,0,0,0.1) }
+
+.editable .showlink
+{ color:blue }
+
 
 

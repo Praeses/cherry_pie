@@ -37,6 +37,8 @@ class User < ActiveRecord::Base
      end
   )
 
+  scope :with_fullname, lambda {|x| where("lower(full_name) like ?",x.downcase.gsub(/_/,' ') ) }
+
 
   def full_name
     full = first_name + " " + last_name
