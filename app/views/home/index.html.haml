@@ -1,4 +1,15 @@
 %section#container
+  - if can? :update, @page
+    .themes
+      %select
+        -`ls app/assets/themes`.split(/\n/).each do |theme|
+          -if @current_site.theme == theme
+            %option{:value => theme,:selected=>true}
+              =theme
+          -else
+            %option{:value => theme}
+              =theme
+
   %header#intro
     %hgroup#pageHeader
       %h1.read#title=@fields[:title]
@@ -62,3 +73,4 @@
   :javascript
     App.page_id = #{@page.id};
     App.page_controller = new App.Pages({el:$('body')});
+    new App.Themes({ theme:"#{@current_site.theme}", el:$('.themes') });

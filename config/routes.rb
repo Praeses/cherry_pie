@@ -9,6 +9,7 @@ CherryPie::Application.routes.draw do
   resources :users
 
   get "home/index"
+  resources :themes, :only => :update
   resources :pages
 
   # The priority is based upon order of creation:

@@ -17,6 +17,10 @@ class Ability
       user.id == usr.id
     end
 
+    can [:update], Site do |site|
+      user.site.id == site.id
+    end
+
     can [:update, :destroy], Page do |page|
       user.admin? || (page.owner && page.owner.id == user.id)
     end
