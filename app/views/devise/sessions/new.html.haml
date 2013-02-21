@@ -1,0 +1,58 @@
+-#%h2 Sign in
+-#= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+-#  %div
+-#    = f.label :email
+-#    %br/
+-#    = f.email_field :email, :autofocus => true
+-#  %div
+-#    = f.label :password
+-#    %br/
+-#    = f.password_field :password
+-#  - if devise_mapping.rememberable?
+-#    %div
+-#      = f.check_box :remember_me
+-#      = f.label :remember_me
+-#  %div= f.submit "Sign in"
+-#= render "devise/shared/links"
+
+%section#container
+  %header#intro
+    = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+      %div
+        = f.label :email
+        %br/
+        = f.email_field :email, :autofocus => true
+      %div
+        = f.label :password
+        %br/
+        = f.password_field :password
+      - if devise_mapping.rememberable?
+        %div
+          = f.check_box :remember_me
+          = f.label :remember_me
+      %div= f.submit "Sign in"
+    = render "devise/shared/links"
+    %nav#linkList
+    %footer#outro
+      %section#pagefooter
+    %hgroup#pageHeader
+    %section#quickSummary
+  %section#supportingText
+
+/ These extra divs/spans may be used as catch-alls to add extra imagery.
+#extraDiv1
+  %span
+#extraDiv2
+  %span
+#extraDiv3
+  %span
+#extraDiv4
+  %span
+#extraDiv5
+  %span
+#extraDiv6
+  %span
+- if can? :update, @page
+  :javascript
+    App.page_id = #{@page.id};
+    App.page_controller = new App.Pages({el:$('body')});
