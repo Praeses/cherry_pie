@@ -32,7 +32,7 @@ header
 {margin:2em}
 
 #container
-{margin-top:29em}
+{margin-top:29em; margin-bottom:-4em}
 
 header
 {margin-top:-14em}
@@ -117,3 +117,41 @@ html { background: #4096ee; background: -moz-linear-gradient(top, #4096ee 0%, #6
 
 #container, header { -moz-border-radius: 14px; -webkit-border-radius: 14px; -o-border-radius: 14px; -ms-border-radius: 14px; }
 
+#intro
+{position: absolute; top:32px; left:32px; right:32px;}
+
+.user, .alert, .notice, .themes
+{position: absolute;  left: 40px; z-index: 10000}
+
+.user
+{position: relative; top:230px; left: -330px}
+
+.notice
+{top:230px}
+
+.alert
+{top:244px}
+
+.notice, .alert
+{color:#CC74B7}
+
+.read
+{margin-bottom: 1em;}
+
+html
+{font-family: Tahoma;}
+
+li, li.read
+{margin-bottom:0}
+
+#announcement
+{position:relative; width:100%; margin-top:0; margin-bottom:-20px; font-family:Gabriola}
+
+#title
+{position:relative; font-family:Harrington; top:-50px; font-size:4em}
+
+.themes
+{top: 405px;}
+
+.themes:before
+{content: "Change theme to: "}
