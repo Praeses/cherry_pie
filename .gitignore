@@ -32,7 +32,7 @@ tags
 # Ignore javascript generated for jasmine testing
 public/javascripts/compiled/*
 
-public/assets
+#public/assets
 
 # Since everyone is using rbenv and I (Micah) am using rvm
 # I decided to use my own custom config for this project

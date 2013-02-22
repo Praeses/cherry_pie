@@ -1,0 +1,1 @@
+(function(){var e=0,t=function(){var t="-"+e+"px 0px";$("#extraDiv2").css("background-position",t),e+=1};e=Math.floor(Math.random()*999),t(),setInterval(t,100)})();
