@@ -1,0 +1,227 @@
+@import url(http://fonts.googleapis.com/css?family=VT323);
+body
+{
+	position:relative;
+	-webkit-animation: bodyPulse 0.8s;
+	-webkit-animation-direction: alternate;
+	-webkit-animation-iteration-count: infinite;
+}
+@-webkit-keyframes bodyPulse
+{
+	from{background:#FFBD01;}
+	to{background:#BF9A30;}
+/*0%   {background:#FFBD01;}
+25%  {background:#BF9A30;}
+50%  {background:#A67B00;}
+100% {background:#BF9A30;}*/
+}
+#pageHeader
+{
+	background:#65A6D1;
+	border:solid 2px #150873;
+	border-radius:50px;
+	box-shadow:0 4px 10px #0A67A3;
+	color:#FFC973;
+	font-family: 'VT323', cursive;
+	font-size:1rem;
+	height:76px;
+	margin:0 auto;
+	padding:20px;
+	position:relative;
+	text-align:center;
+	text-transform:uppercase;
+	top:0;
+	width:80%;
+	word-spacing:10px;
+	-webkit-animation: headerAnimation 0.8s;
+	-webkit-animation-direction: alternate;
+	-webkit-animation-iteration-count: infinite;
+}
+@-webkit-keyframes headerAnimation
+{
+/*0%   {box-shadow:0 4px 10px #0A67A3;top:-2px;width:80%;}
+25%  {box-shadow:0 8px 20px #0A67A3;top:-3px;width:85%;}
+50%  {box-shadow:0 12px 30px #0A67A3;top:-6px;width:90%;}
+100% {background: #65A6D1;box-shadow:0 16px 40px #0A67A3;top:-8px;width:95%;}*/
+
+from {box-shadow:0 4px 10px #0A67A3;font-size:1rem;top:0;width:80%;}
+to {box-shadow:0 16px 40px #0A67A3;font-size:1.1rem;top:-20px;width:85%;}
+}
+.notice
+{
+	background:url('../images/8_bit_mario_sprites_by_arik239.png') no-repeat -100px -22px;
+	content:"";
+	display:block;
+	height:40px;
+	position:absolute;
+	text-indent:-9999px;
+	top:10px;
+	width:30px;
+	-webkit-animation: marioMovement 5s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: ease;
+}
+@-webkit-keyframes mario /* Safari and Chrome */
+{
+from {background:url('../images/mario1-26x32.png') no-repeat left top;}
+to {background:url('../images/mario2-26x32.png') no-repeat left top;}
+}
+
+@-webkit-keyframes marioMovement /* Safari and Chrome */
+{
+1%   {background:url('../images/mario1-26x32.png') no-repeat left top;left:0;}
+2%   {background:url('../images/mario2-26x32.png') no-repeat left top;left:1%;}
+3%   {background:url('../images/mario1-26x32.png') no-repeat left top;left:2%;}
+4%   {background:url('../images/mario2-26x32.png') no-repeat left top;left:3%;}
+5%   {background:url('../images/mario1-26x32.png') no-repeat left top;left:4%;}
+6%   {background:url('../images/mario2-26x32.png') no-repeat left top;left:5%;}
+7%   {background:url('../images/mario1-26x32.png') no-repeat left top;left:6%;}
+8%   {background:url('../images/mario2-26x32.png') no-repeat left top;left:7%;}
+9%   {background:url('../images/mario1-26x32.png') no-repeat left top;left:8%;}
+10%   {background:url('../images/mario2-26x32.png') no-repeat left top;left:9%;}
+11%   {background:url('../images/mario1-26x32.png') no-repeat left top;left:10%;}
+12%   {background:url('../images/mario2-26x32.png') no-repeat left top;left:11%;}
+13%   {background:url('../images/mario1-26x32.png') no-repeat left top;left:12%;}
+14%   {background:url('../images/mario2-26x32.png') no-repeat left top;left:13%;}
+15%   {background:url('../images/mario1-26x32.png') no-repeat left top;left:14%;}
+16%   {background:url('../images/mario2-26x32.png') no-repeat left top;left:15%;}
+17%   {background:url('../images/mario1-26x32.png') no-repeat left top;left:16%;}
+18%   {background:url('../images/mario2-26x32.png') no-repeat left top;left:17%;}
+19%   {background:url('../images/mario1-26x32.png') no-repeat left top;left:18%;}
+20%   {background:url('../images/mario2-26x32.png') no-repeat left top;left:19%;}
+21%   {background:url('../images/mario1-26x32.png') no-repeat left top;left:20%;}
+22%   {background:url('../images/mario2-26x32.png') no-repeat left top;left:21%;}
+23%   {background:url('../images/mario1-26x32.png') no-repeat left top;left:22%;}
+24%   {background:url('../images/mario2-26x32.png') no-repeat left top;left:23%;}
+25%   {background:url('../images/mario1-26x32.png') no-repeat left top;left:24%;}
+26%   {background:url('../images/mario2-26x32.png') no-repeat left top;left:25%;}
+27%   {background:url('../images/mario1-26x32.png') no-repeat left top;left:26%;}
+28%   {background:url('../images/mario2-26x32.png') no-repeat left top;left:27%;}
+29%   {background:url('../images/mario1-26x32.png') no-repeat left top;left:28%;}
+30%   {background:url('../images/mario2-26x32.png') no-repeat left top;left:29%;}
+31%   {background:url('../images/mario1-26x32.png') no-repeat left top;left:30%;}
+32%   {background:url('../images/mario2-26x32.png') no-repeat left top;left:31%;}
+33%   {background:url('../images/mario1-26x32.png') no-repeat left top;left:32%;}
+34%   {background:url('../images/mario2-26x32.png') no-repeat left top;left:33%;}
+35%   {background:url('../images/mario1-26x32.png') no-repeat left top;left:34%;}
+36%   {background:url('../images/mario2-26x32.png') no-repeat left top;left:35%;}
+37%   {background:url('../images/mario1-26x32.png') no-repeat left top;left:36%;}
+38%   {background:url('../images/mario2-26x32.png') no-repeat left top;left:37%;}
+39%   {background:url('../images/mario1-26x32.png') no-repeat left top;left:38%;}
+40%   {background:url('../images/mario2-26x32.png') no-repeat left top;left:39%;}
+41%   {background:url('../images/mario1-26x32.png') no-repeat left top;left:40%;}
+42%   {background:url('../images/mario2-26x32.png') no-repeat left top;left:41%;}
+43%   {background:url('../images/mario1-26x32.png') no-repeat left top;left:42%;}
+44%   {background:url('../images/mario2-26x32.png') no-repeat left top;left:43%;}
+45%   {background:url('../images/mario1-26x32.png') no-repeat left top;left:44%;}
+46%   {background:url('../images/mario2-26x32.png') no-repeat left top;left:45%;}
+47%   {background:url('../images/mario1-26x32.png') no-repeat left top;left:46%;}
+48%   {background:url('../images/mario2-26x32.png') no-repeat left top;left:47%;}
+49%   {background:url('../images/mario1-26x32.png') no-repeat left top;left:48%;}
+50%   {background:url('../images/mario2-26x32.png') no-repeat left top;left:49%;}
+51%   {background:url('../images/mario1-26x32.png') no-repeat left top;left:50%;}
+52%   {background:url('../images/mario2-26x32.png') no-repeat left top;left:51%;}
+53%   {background:url('../images/mario1-26x32.png') no-repeat left top;left:52%;}
+54%   {background:url('../images/mario2-26x32.png') no-repeat left top;left:53%;}
+55%   {background:url('../images/mario1-26x32.png') no-repeat left top;left:54%;}
+56%   {background:url('../images/mario2-26x32.png') no-repeat left top;left:55%;}
+57%   {background:url('../images/mario1-26x32.png') no-repeat left top;left:56%;}
+58%   {background:url('../images/mario2-26x32.png') no-repeat left top;left:57%;}
+59%   {background:url('../images/mario1-26x32.png') no-repeat left top;left:58%;}
+60%   {background:url('../images/mario2-26x32.png') no-repeat left top;left:59%;}
+61%   {background:url('../images/mario1-26x32.png') no-repeat left top;left:60%;}
+62%   {background:url('../images/mario2-26x32.png') no-repeat left top;left:61%;}
+63%   {background:url('../images/mario1-26x32.png') no-repeat left top;left:62%;}
+64%   {background:url('../images/mario2-26x32.png') no-repeat left top;left:63%;}
+65%   {background:url('../images/mario1-26x32.png') no-repeat left top;left:64%;}
+66%   {background:url('../images/mario2-26x32.png') no-repeat left top;left:65%;}
+67%   {background:url('../images/mario1-26x32.png') no-repeat left top;left:66%;}
+68%   {background:url('../images/mario2-26x32.png') no-repeat left top;left:67%;}
+69%   {background:url('../images/mario1-26x32.png') no-repeat left top;left:68%;}
+70%   {background:url('../images/mario2-26x32.png') no-repeat left top;left:69%;}
+71%   {background:url('../images/mario1-26x32.png') no-repeat left top;left:70%;}
+72%   {background:url('../images/mario2-26x32.png') no-repeat left top;left:71%;}
+73%   {background:url('../images/mario1-26x32.png') no-repeat left top;left:72%;}
+74%   {background:url('../images/mario2-26x32.png') no-repeat left top;left:73%;}
+75%   {background:url('../images/mario1-26x32.png') no-repeat left top;left:74%;}
+76%   {background:url('../images/mario2-26x32.png') no-repeat left top;left:75%;}
+77%   {background:url('../images/mario1-26x32.png') no-repeat left top;left:76%;}
+78%   {background:url('../images/mario2-26x32.png') no-repeat left top;left:77%;}
+79%   {background:url('../images/mario1-26x32.png') no-repeat left top;left:78%;}
+80%   {background:url('../images/mario2-26x32.png') no-repeat left top;left:79%;}
+81%   {background:url('../images/mario1-26x32.png') no-repeat left top;left:80%;}
+82%   {background:url('../images/mario2-26x32.png') no-repeat left top;left:81%;}
+83%   {background:url('../images/mario1-26x32.png') no-repeat left top;left:82%;}
+84%   {background:url('../images/mario2-26x32.png') no-repeat left top;left:83%;}
+85%   {background:url('../images/mario1-26x32.png') no-repeat left top;left:84%;}
+86%   {background:url('../images/mario2-26x32.png') no-repeat left top;left:85%;}
+87%   {background:url('../images/mario1-26x32.png') no-repeat left top;left:86%;}
+88%   {background:url('../images/mario2-26x32.png') no-repeat left top;left:87%;}
+89%   {background:url('../images/mario1-26x32.png') no-repeat left top;left:88%;}
+90%   {background:url('../images/mario2-26x32.png') no-repeat left top;left:89%;}
+91%   {background:url('../images/mario1-26x32.png') no-repeat left top;left:90%;}
+92%   {background:url('../images/mario2-26x32.png') no-repeat left top;left:91%;}
+93%   {background:url('../images/mario1-26x32.png') no-repeat left top;left:92%;}
+94%   {background:url('../images/mario2-26x32.png') no-repeat left top;left:93%;}
+95%   {background:url('../images/mario1-26x32.png') no-repeat left top;left:94%;}
+96%	  {background:url('../images/mario2-26x32.png') no-repeat left top;left:95%;}
+}
+.head
+{
+	height:50px;
+	margin:0 auto;
+	width:960px;
+}
+.themes
+{
+	position:absolute;
+	right:0;
+	top:-70px;
+}
+#container
+{
+	margin:0 auto;
+	position:relative;
+	width:960px;
+}
+#intro
+{
+	padding-top:20px;
+}
+#announcement
+{
+	text-align:center;
+}
+#supportingText
+{
+	overflow:auto;
+}
+#supportingText .read
+{
+	float:left;
+	margin:1%;
+	width:30%;
+}
+#linkList
+{
+	clear:both;
+	margin-top:20px;
+}
+#linkList li
+{
+	float:left;
+	list-style-type:none;
+	margin:1%;
+	width:30%;
+}
+#linkList a
+{
+	color:#FF4201;
+	font-size:1.2rem;
+	font-weight:bold;
+	text-decoration:none;
+}
+#linkList a:hover
+{
+	text-decoration:underline;
+}
