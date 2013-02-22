@@ -26,7 +26,7 @@ class UsersController < ApplicationController
   # GET /users/new.json
   def new
     @user = User.new()
-
+    @fields = {}
     respond_to do |format|
       format.html # new.html.erb
       format.json { render :json => @user }
@@ -35,13 +35,14 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
+    @fields = {}
     @user = User.find(params[:id])
   end
 
   # POST /users
   # POST /users.json
   def create
-
+    @fields = {}
     @user = User.new(params[:user])
     @user.password = (0...8).map{65.+(rand(25)).chr}.join #Random temp password
     @user.admin = params[:user][:admin]
@@ -61,6 +62,7 @@ class UsersController < ApplicationController
   # PUT /users/1
   # PUT /users/1.json
   def update
+    @fields = {}
     @user = User.find(params[:id])
     @user.admin = params[:user][:admin]
     params[:user].delete :admin
@@ -78,6 +80,7 @@ class UsersController < ApplicationController
   # DELETE /users/1
   # DELETE /users/1.json
   def destroy
+    @fields = {}
     @user = User.find(params[:id])
     @user.destroy
 
