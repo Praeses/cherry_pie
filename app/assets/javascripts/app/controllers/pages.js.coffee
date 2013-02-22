@@ -7,6 +7,7 @@ class App.Pages extends Spine.Controller
 
   setup_read: (elm) =>
     return new App.Link({el:elm, model:@model }) if $(elm).hasClass('link')
+    return new App.Internal({el:elm, model:@model }) if $(elm).hasClass('page')
     return new App.Texts({el:elm, model:@model })
 
   render: (p) =>

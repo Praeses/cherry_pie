@@ -52,7 +52,6 @@ class PagesController < ApplicationController
     authorize! :update, @page
     respond_to do |format|
       if @page.update_attributes(params[:page])
-        #@page.fields = params[:fields]
         format.json { head :no_content }
       else
         format.json { render json: @page.errors, status: :unprocessable_entity }
