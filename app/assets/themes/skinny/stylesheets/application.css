@@ -26,10 +26,10 @@ h1, h2
 { text-align: center; }
 
 #linkList
-{ position:relative; left: 30em; top:-53em; vertical-align: top;  border: 0.2em solid; border-color: #B2A1A1; padding-right:1em}
+{ position:relative; float: right; left:0; top:-5.55em; vertical-align: top;  border: 0.2em solid; border-color: #B2A1A1; padding-right:1em}
 
 body
-{ width: 40em; }
+{ width: 40em;}
 
 #supportingText
 { width: 27em; border: 0.2em solid; border-color: #B2A1A1; padding: 1em}
