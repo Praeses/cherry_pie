@@ -1,8 +1,7 @@
 #pageHeader
-{ border: 0.5em black dashed; }
+{ border: 0.5em dashed; border-color:#B2A1A1}
 
-#supportingText,
-#linkList
+#supportingText
 { display: inline-block; }
 
 h1
@@ -12,7 +11,7 @@ h2
 { font-size: 1.25em; }
 
 #linkList
-{ left: 20em; }
+{ left: 19em; }
 
 body
 { margin: auto; }
@@ -24,17 +23,34 @@ h1, h2
 { padding: 0.25em; }
 
 #pageHeader #title
-{ text-align: right; }
+{ text-align: center; }
 
 #linkList
-{ vertical-align: top; }
+{ position:relative; left: 30em; top:-53em; vertical-align: top;  border: 0.2em solid; border-color: #B2A1A1; padding-right:1em}
 
 body
-{ width: 30em; }
+{ width: 40em; }
 
 #supportingText
-{ width: 20em; }
+{ width: 27em; border: 0.2em solid; border-color: #B2A1A1; padding: 1em}
 
 #linkList
 { width: 9em; }
 
+html
+{color: #8FB299;}
+
+#announcement
+{ border: 0.2em solid; border-color: #B2A1A1; padding: 1em; width: 21em}
+
+.notice, .alert
+{position: relative; color: red; left: 30em; display:inline}
+
+.notice
+{top: -16px}
+
+.alert
+{top:0px; left: 24.2em}
+
+.themes:before
+{content: "Change theme to: "}
