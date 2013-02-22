@@ -4,12 +4,13 @@ class App.Internal extends Spine.Controller
     super
     @a = $('a', @el)
     if @isNew
-      @page = new App.Page({})
+      @page = new App.Page({ canDestroy:true })
     else
       id = parseInt @a.attr('data-id')
+      canDestroy = @a.attr('data-candestroy') is 'true'
       href = @a.attr('href')
       name = @a.text().trim()
-      @page = new App.Page({ name: name, href: href })
+      @page = new App.Page({ name: name, href: href, canDestroy: canDestroy  })
       @page.id = id
 
     @page.bind 'ajaxSuccess', @afterSave
@@ -19,6 +20,11 @@ class App.Internal extends Spine.Controller
 
   events:
     'change input': 'onChange'
+    'click button': 'onDestroy'
+
+  onDestroy: (e) =>
+    $(@el).remove()
+    @page.destroy()
 
   onChange: (e) =>
     @page.name = $(e.target).val().trim() || null

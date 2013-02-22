@@ -56,11 +56,11 @@
           - @pages.each do |page_link|
             -if can? :edit, page_link
               %li.read.page
-                %a{:href => "#{page_link.href}",'data-id' => "#{page_link.id}" }
+                %a{:href => "#{page_link.href}",'data-id' => "#{page_link.id}", 'data-candestroy' => page_link.canDestroy.to_s  }
                   =page_link.name || page_link.id
             -else
               %li
-                %a{:href => "#{page_link.href}",'data-id' => "#{page_link.id}" }
+                %a{:href => "#{page_link.href}" }
                   =page_link.name || page_link.id
 
       %nav#linkList

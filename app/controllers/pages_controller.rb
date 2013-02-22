@@ -38,7 +38,7 @@ class PagesController < ApplicationController
   #spine.js is calling create on update :'( not time to fix
   def create
     @page = Page.find_by_id(params[:id]) || Page.new(params[:page])
-    @page.site_id = @current_site.id
+    @page.site_id = @current_site.id unless @page.site_id
     authorize! :update, @page
     @page.name = params[:name] || @page.name
     respond_to do |format|
@@ -48,6 +48,7 @@ class PagesController < ApplicationController
           :fields => @page.fields,
           :href => @page.href,
           :name => @page.name,
+          :canDestroy => @page.canDestroy
         }
         end
       else
@@ -75,7 +76,9 @@ class PagesController < ApplicationController
 
 
   def destroy
-    @page = Page.find(params[:id])
+    @page = Page.find_by_id(params[:id]) || Page.new(params[:page])
+    authorize! :destroy, @page
+
     @page.destroy
 
     respond_to do |format|

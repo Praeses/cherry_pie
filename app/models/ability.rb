@@ -21,11 +21,15 @@ class Ability
       user.site.id == site.id
     end
 
-    can [:update, :destroy], Page do |page|
+    can [:update], Page do |page|
       user.admin? || (page.owner && page.owner.id == user.id)
     end
 
-    can :manage, Page if user.admin?
+    can [:destroy], Page do |page|
+      user.admin? && page.canDestroy
+    end
+
+    can :create, Page if user.admin?
 
   end
 end
