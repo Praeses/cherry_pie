@@ -14,6 +14,7 @@ class ApplicationController < ActionController::Base
     Rails.application.config.action_mailer.default_url_options ||= {}
     Rails.application.config.action_mailer.default_url_options[:host] = request.host_with_port
     theme @current_site.theme
+    @pages = Page.for_site(@current_site).for_root()
   end
 
   def authenticate_any!

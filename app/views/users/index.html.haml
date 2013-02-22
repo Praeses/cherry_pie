@@ -1,37 +1,9 @@
-%section#container
-  %header#intro
-    %hgroup#pageHeader
-      %h1.read#title=@fields[:title]
-  %h2.read#announcement=@fields[:announcement]
-  %section#supportingText
-    %article
-      %section.read#article1=@fields[:article1]
-  %nav#linkList
-    %ul
-      -@users.each do |user|
-        %li
-          =link_to "#{user.full_name}", user_path(user)
-          - if can? :update, user
-            =link_to 'Edit User', edit_user_path(user)
-          - if can? :destroy, user
-            =link_to 'Destroy User', user, :confirm => 'Are you sure?', :method => :delete
-  %footer#outro
-    %section#pagefooter
-
-/ These extra divs/spans may be used as catch-alls to add extra imagery.
-#extraDiv1
-  %span
-#extraDiv2
-  %span
-#extraDiv3
-  %span
-#extraDiv4
-  %span
-#extraDiv5
-  %span
-#extraDiv6
-  %span
-- if can? :update, @page
-  :javascript
-    App.page_id = #{@page.id};
-    App.page_controller = new App.Pages({el:$('body')});
+%nav#linkList
+  %ul
+    -@users.each do |user|
+      %li
+        =link_to "#{user.full_name}", user_path(user)
+        - if can? :update, user
+          =link_to 'Edit User', edit_user_path(user)
+        - if can? :destroy, user
+          =link_to 'Destroy User', user, :confirm => 'Are you sure?', :method => :delete
