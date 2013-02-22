@@ -41,7 +41,7 @@ class User < ActiveRecord::Base
 
 
   def full_name
-    full = first_name + " " + last_name
+    full = "#{first_name} #{last_name}"
     write_attribute(:full_name, full)
     full
   end

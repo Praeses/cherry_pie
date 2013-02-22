@@ -24,10 +24,8 @@
       %section.read#article3=@fields[:article3]
   %nav#linkList
     %ul
-      - @pages.each do |page_link|
-        %li.read.page
-          %a{:href => "#{page_link.href}",'data-id' => "#{page_link.id}" }
-            =page_link.name || page_link.id
+      %li
+        = link_to "Teachers", users_path(), {'data-name' => 'link_users'}
       %li.read.link
         %a{:href => "#{@fields[:link1_href]}",'data-name' => 'link1' }
           =@fields[:link1]
@@ -55,6 +53,10 @@
       %li.read.link
         %a{:href => "#{@fields[:link9_href]}",'data-name' => 'link9' }
           =@fields[:link9]
+      - @pages.each do |page_link|
+        %li.read.page
+          %a{:href => "/pages/#{page_link.name || page_link.id}",'data-id' => "#{page_link.id}" }
+            =page_link.name || page_link.id
   %footer#outro
     %section#pagefooter
 

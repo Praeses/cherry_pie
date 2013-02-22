@@ -22,4 +22,8 @@ class Page < ActiveRecord::Base
   end
 
 
+  scope :for_site, lambda {|x| where( :site_id => x.id ) }
+  scope :for_root, lambda {|| where( :owner_id => nil ) }
+
+
 end
