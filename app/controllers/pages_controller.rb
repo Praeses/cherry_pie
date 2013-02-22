@@ -42,7 +42,7 @@ class PagesController < ApplicationController
     authorize! :update, @page
     @page.name = params[:name] || @page.name
     respond_to do |format|
-      if @page.save
+      if @page.save && @page.update_attributes(params[:page])
         format.json do render json: {
           :id => @page.id,
           :fields => @page.fields,
