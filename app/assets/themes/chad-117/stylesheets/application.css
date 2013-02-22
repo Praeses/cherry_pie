@@ -1,0 +1,91 @@
+body
+{
+	background:#000 url('../images/halo-background.jpg') no-repeat center top;
+	font-family:Consolas, 'Lucida Console', 'DejaVu Sans Mono', monospace;
+}
+.head
+{
+	background:rgba(73, 149, 0, 0.5);
+	border:solid 1px #6AAC2B;
+	color:#95F23D;
+	margin:0 auto;
+	padding:20px;
+	text-align:center;
+	width:960px;
+}
+.head a
+{
+	color:#95F23D;
+}
+#container
+{
+	bottom:0;
+	left:0;
+	margin:0 auto;
+	padding:70px 0 0 0;
+	position:absolute;
+	right:0;
+	top:0;
+	width:960px;
+}
+.themes
+{
+	bottom:10px;
+	color:#95F23D;
+	left:0;
+	margin:0 auto;
+	padding:20px;
+	position:absolute;
+	right:0;
+	text-align:center;
+	width:960px;
+}
+#intro
+{
+	background:rgba(255, 255, 255, 0.5) url('../images/unsc-logo-small.png') no-repeat 10px center;
+	font-size:1.2rem;
+	height:100px;
+	line-height:100px;
+	margin:0 auto 20px;
+	padding-left:100px;
+	width:600px;
+}
+#announcement
+{
+	color:rgba(255, 255, 255, 0.5);
+	margin:0 auto 20px;
+	text-align:center;
+	width:960px;
+}
+#supportingText
+{
+	color:#FFF;
+	height:600px;
+	overflow-y:scroll;
+	width:400px;
+}
+#supportingText article
+{
+	margin-bottom:10px;
+}
+#linkList
+{
+	position:absolute;
+	right:0;
+	top:240px;
+	width:400px;
+}
+#linkList li
+{
+	list-style-type:none;
+}
+#linkList a
+{
+	color:#FFF;
+	font-size:2rem;
+	text-decoration:none;
+}
+#linkList a:hover
+{
+	text-decoration:underline;
+}
