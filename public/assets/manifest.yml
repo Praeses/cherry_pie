@@ -33,8 +33,8 @@ apple/images/grass.png: apple/images/grass-7ea5d772a09e13fced9b4cdfef9a1d78.png
 apple/images/grass/index.png: apple/images/grass-7ea5d772a09e13fced9b4cdfef9a1d78.png
 apple/javascripts/application.js: apple/javascripts/application-b93da9109729c393dcc4b874656d4916.js
 apple/javascripts/application/index.js: apple/javascripts/application-b93da9109729c393dcc4b874656d4916.js
-apple/stylesheets/application.css: apple/stylesheets/application-dadd0269db1ae10aad8aea7841c4307b.css
-apple/stylesheets/application/index.css: apple/stylesheets/application-dadd0269db1ae10aad8aea7841c4307b.css
+apple/stylesheets/application.css: apple/stylesheets/application-654b03ff36e897f2c29bb053fac3e453.css
+apple/stylesheets/application/index.css: apple/stylesheets/application-654b03ff36e897f2c29bb053fac3e453.css
 clean/stylesheets/application.css: clean/stylesheets/application-a830d0e5fba719a1491fa086c8f6b2ba.css
 clean/stylesheets/application/index.css: clean/stylesheets/application-a830d0e5fba719a1491fa086c8f6b2ba.css
 fugly/images/8_bit_mario_sprites_by_arik239.png: fugly/images/8_bit_mario_sprites_by_arik239-b73c56ab73d34b52fff4f9c9727cb4fc.png
@@ -65,7 +65,7 @@ school_house/stylesheets/application.css: school_house/stylesheets/application-2
 school_house/stylesheets/application/index.css: school_house/stylesheets/application-2e8bb27f5c443078d0167ac4bea37219.css
 skinny/javascripts/application.js: skinny/javascripts/application-f00251f452c48102b58e406cc891259e.js
 skinny/javascripts/application/index.js: skinny/javascripts/application-f00251f452c48102b58e406cc891259e.js
-skinny/stylesheets/application.css: skinny/stylesheets/application-e1e1cca7fc00f11d3dc5e88ed4825337.css
-skinny/stylesheets/application/index.css: skinny/stylesheets/application-e1e1cca7fc00f11d3dc5e88ed4825337.css
+skinny/stylesheets/application.css: skinny/stylesheets/application-6297303d296b3eed00aac9e6ddc9bed9.css
+skinny/stylesheets/application/index.css: skinny/stylesheets/application-6297303d296b3eed00aac9e6ddc9bed9.css
 jquery.min.map: jquery.min-959a5819c76e1508f5a8655c289c0de8.map
 jquery/index.min.map: jquery.min-959a5819c76e1508f5a8655c289c0de8.map
