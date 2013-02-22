@@ -78,7 +78,10 @@ header
 header, #supportingText
 {padding:1em}
 
-h1,h2
+h1
+{padding:0em}
+
+h2
 {padding:0.5em}
 
 #extraDiv1,
@@ -117,9 +120,6 @@ html { background: #4096ee; background: -moz-linear-gradient(top, #4096ee 0%, #6
 
 #container, header { -moz-border-radius: 14px; -webkit-border-radius: 14px; -o-border-radius: 14px; -ms-border-radius: 14px; }
 
-#intro
-{position: absolute; top:32px; left:32px; right:32px;}
-
 .user, .alert, .notice, .themes
 {position: absolute;  left: 40px; z-index: 10000}
 
@@ -148,7 +148,7 @@ li, li.read
 {position:relative; width:100%; margin-top:0; margin-bottom:-20px; font-family:Gabriola}
 
 #title
-{position:relative; font-family:Harrington; top:-50px; font-size:4em}
+{font-family:Harrington; font-size:4em}
 
 .themes
 {top: 405px;}
