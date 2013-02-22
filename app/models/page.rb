@@ -21,6 +21,9 @@ class Page < ActiveRecord::Base
     value
   end
 
+  def href
+   read_attribute(:href) || ( self.name.blank? ? "/pages/#{id}" : "/pages/#{name}" )
+  end
 
   scope :for_site, lambda {|x| where( :site_id => x.id ) }
   scope :for_root, lambda {|| where( :owner_id => nil ) }

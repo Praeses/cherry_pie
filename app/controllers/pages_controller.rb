@@ -35,11 +35,21 @@ class PagesController < ApplicationController
   #end
 
 
+  #spine.js is calling create on update :'( not time to fix
   def create
-    @page = Page.new(params[:page])
+    @page = Page.find_by_id(params[:id]) || Page.new(params[:page])
+    @page.site_id = @current_site.id
+    authorize! :update, @page
+    @page.name = params[:name] || @page.name
     respond_to do |format|
       if @page.save
-        format.json { render json: @page, status: :created, location: @page }
+        format.json do render json: {
+          :id => @page.id,
+          :fields => @page.fields,
+          :href => @page.href,
+          :name => @page.name,
+        }
+        end
       else
         format.json { render json: @page.errors, status: :unprocessable_entity }
       end
@@ -48,16 +58,20 @@ class PagesController < ApplicationController
 
 
   def update
-    @page = Page.find(params[:id])
-    authorize! :update, @page
-    respond_to do |format|
-      if @page.update_attributes(params[:page])
-        format.json { head :no_content }
-      else
-        format.json { render json: @page.errors, status: :unprocessable_entity }
-      end
-    end
+    create
   end
+
+  #def update
+  #  @page = Page.find(params[:id])
+  #  authorize! :update, @page
+  #  respond_to do |format|
+  #    if @page.update_attributes(params[:page])
+  #      format.json { head :no_content }
+  #    else
+  #      format.json { render json: @page.errors, status: :unprocessable_entity }
+  #    end
+  #  end
+  #end
 
 
   def destroy

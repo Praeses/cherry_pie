@@ -25,5 +25,7 @@ class Ability
       user.admin? || (page.owner && page.owner.id == user.id)
     end
 
+    can :manage, Page if user.admin?
+
   end
 end

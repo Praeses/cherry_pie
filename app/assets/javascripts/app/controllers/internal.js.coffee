@@ -3,13 +3,19 @@ class App.Internal extends Spine.Controller
   constructor: ->
     super
     @a = $('a', @el)
-    id = parseInt @a.attr('data-id')
-    name = @a.text().trim()
-    @page = new App.Page({ name: name })
-    @page.id = id
+    if @isNew
+      @page = new App.Page({})
+    else
+      id = parseInt @a.attr('data-id')
+      href = @a.attr('href')
+      name = @a.text().trim()
+      @page = new App.Page({ name: name, href: href })
+      @page.id = id
+
+    @page.bind 'ajaxSuccess', @afterSave
+
     editer_view = $(JST['templates/fields/editinternal']( @page ))
     $(@el).append editer_view
-    console.log @page
 
   events:
     'change input': 'onChange'
@@ -17,7 +23,9 @@ class App.Internal extends Spine.Controller
   onChange: (e) =>
     @page.name = $(e.target).val().trim() || null
     @a.text( @page.name )
-    debugger
     @page.save()
+
+  afterSave: (status, page) =>
+    @a.attr('href', page.href)
 
 
